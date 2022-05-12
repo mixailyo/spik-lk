@@ -1,0 +1,90 @@
+.appointment {
+}
+.appointment__title {
+  margin-bottom: 30px;
+}
+.appointment__input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.appointment__select  {
+  margin-bottom: 20px;
+}
+.appointment__date {
+  position: relative;
+  border: unset;
+  background-color: unset;
+  padding: 10px 15px;
+  outline: none;
+  max-width: 100%;
+  border: 1px solid rgba(36, 36, 36, 0.2);
+  border-radius: 8px;
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-clear-button {
+    z-index: -10
+  }
+
+  &::-webkit-input-placeholder {
+    z-index: 99
+  }
+  
+  &:placeholder {
+    z-index: 99
+  }
+
+  &:before {
+    width: 100%;
+    content: attr(data-value);
+    color: rgba(36, 36, 36, 0.2);
+  }
+
+  &--active {
+    &::before {
+      color: inherit;
+    }
+  }
+}
+.appointment__warning {
+  display: flex;
+  align-items: center;
+  background: rgba(103, 30, 166, 0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+
+  @include vp-1023 {
+    padding: 10px;
+  }
+}
+.appointment__warning-icon {
+  flex-shrink: 0;
+  margin-right: 20px;
+
+  @include vp-1023 {
+    margin-right: 10px;
+  }
+}
+.appointment__files {
+}
+.appointment__privacy {
+  margin-top: 30px;
+  font-size: 12px;
+}
+.appointment__submit {
+  margin: 40px auto 0;
+  width: 180px;
+}

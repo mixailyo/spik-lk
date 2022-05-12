@@ -1,0 +1,21 @@
+.modal[data-modal="make-an-appointment"] {
+  .modal__content {
+    padding: 50px;
+
+    @include vp-1023 {
+      padding: 45px 20px 30px;
+    }
+  }
+
+  .modal__close-btn {
+    @include vp-1023 {
+      top: 10px;
+      right: 10px;
+      
+      svg {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

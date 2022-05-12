@@ -1,0 +1,204 @@
+.registration {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: 100vh;
+
+  @include vp-1023 {
+    grid-template-columns: auto;
+    min-height: auto;
+  }
+}
+.registration__left-wrapper {
+  overflow: hidden;
+  padding: 325px 130px 100px 115px;
+  @include adaptiveDesktopToMobile('padding-top', 325, 120);
+  @include adaptiveDesktopToMobile('padding-right', 130, 15);
+  @include adaptiveDesktopToMobile('padding-bottom', 100, 50);
+  @include adaptiveDesktopToMobile('padding-left', 115, 15);
+
+  @include vp-1023 {
+    order: 1;
+    @include adaptiveDesktopToMobile('padding-top', 325, 120);
+    @include adaptiveDesktopToMobile('padding-right', 115, 15);
+    @include adaptiveDesktopToMobile('padding-bottom', 100, 50);
+    @include adaptiveDesktopToMobile('padding-left', 115, 15);
+  }
+}
+.registration__button-back {
+  background: #FFFFFF;
+  box-shadow: 0px 15px 34px -10px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+  border: unset;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow $trans-default;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  transform: translateY(-50%);
+
+  &:hover {
+    box-shadow: 0px 15px 34px -10px rgba(0, 0, 0, 0.4);
+  }
+}
+.registration__button-back-pic {
+  margin-left: -3px;
+}
+.registration__form {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(28px);
+  border-radius: 16px;
+  padding: 32px 25px;
+  text-align: center;
+  width: fit-content;
+  margin: 0 0 0 auto;
+  width: 370px;
+  max-width: 93vw; 
+  position: relative;
+
+  @include vp-1023 {
+    margin: 0 auto;
+    min-width: unset; 
+  }
+}
+.registration__form-title {
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0 0 10px 0;
+}
+.registration__form-description {
+  line-height: 150%;
+  max-width: 330px;
+  margin: 0 auto 32px;
+}
+.registration__form-input {
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+}
+.registration__form-submit {
+  width: 100%;
+  margin-top: 32px;
+}
+.registration__form-footer {
+  color: $color-purple-heart;
+  position: relative;
+  display: block;
+  margin: 32px 0 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translate(-100%, -50%);
+    width: 30px;
+    height: 1px;
+    background-color: rgba(175, 184, 196, 0.3);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translate(100%, -50%);
+    width: 30px;
+    height: 1px;
+    background-color: rgba(175, 184, 196, 0.3);
+  }
+}
+.registration__right-wrapper {
+  @include vp-1023 {
+    order: 0;
+    height: fit-content;
+  }
+}
+
+.registration__form-code {
+  &--error {
+    .registration__form-code-input {
+      border-color: $color-venetian-red;
+      background: rgba(209, 0, 12, 0.03);
+    }
+    .registration__form-code-error {
+      display: block;
+    }
+  }
+}
+.registration__form-code-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registration__form-code-input {
+  mix-blend-mode: normal;
+  border: 1px solid $color-thistle;
+  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  background-color: unset;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  outline: unset;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+.registration__form-code-error {
+  display: none;
+  color: $color-venetian-red;
+}
+.registration__form-code-send {
+  margin: 16px 0 32px;
+
+  &--allowed {
+    .registration__form-code-send-message {
+      display: none;
+    }
+    .registration__form-code-send-btn {
+      display: block;
+    }
+  }
+}
+.registration__form-code-send-message {
+  margin: 0;
+}
+.registration__form-code-send-message-timer {
+  color: $color-purple-heart;
+}
+.registration__form-code-send-btn {
+  border: unset;
+  background-color: unset;
+
+  display: none;
+  margin: 0 auto;
+  text-decoration-line: underline;
+  color: #671EA6;
+}
+.registration__form-password {
+  position: relative;
+}
+.registration__form-password-show {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+  background-image: url('../../img/svg/show-password.svg');
+  border: unset;
+  cursor: pointer;
+}
+
+.registration__form-auth {
+  margin: 10px 0 0;
+}

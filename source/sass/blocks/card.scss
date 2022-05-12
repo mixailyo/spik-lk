@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+.card__pic {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+}
+.card__name {
+  margin: 20px 0 10px;
+  font-size: 24px;
+}
+.card__price {
+  font-weight: 700;
+  font-size: 16px;
+  margin: auto 0 0;
+
+  span {
+    font-size: 24px;
+  }
+}
+.card__more {
+  font-size: 16px;
+  display: block;
+  margin: 15px 0 0;
+  text-decoration-line: underline;
+  color: $color-purple-heart;
+}
+.card__specialist-name {
+  font-size: 18px;
+  color: $color-jacksons-purple;
+  margin: 20px 0 0;
+}
+.card__specialist-position {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 5px 0 0;
+}

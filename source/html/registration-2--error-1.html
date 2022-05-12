@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>СПИК - Личный кабинет</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <section class="registration">
+    <div class="registration__left-wrapper">
+      <form action="" class="registration__form">
+        <button class="registration__button-back button-back">
+          <img class="button-back__pic" src="img/svg/arrow-back.svg" alt="Назад" />
+        </button>
+        <h2 class="registration__form-title">Код подтверждения</h2>
+        <p class="registration__form-description">Введите 5-значный код подтверждения</p>
+        <div class="registration__form-code registration__form-code--error">
+          <div class="registration__form-code-inputs">
+            <input type="text" maxlength="1" class="registration__form-code-input">
+            <input type="text" maxlength="1" class="registration__form-code-input">
+            <input type="text" maxlength="1" class="registration__form-code-input">
+            <input type="text" maxlength="1" class="registration__form-code-input">
+            <input type="text" maxlength="1" class="registration__form-code-input">
+          </div>
+          <p class="registration__form-code-error">Неверный код, попробуйте снова</p>
+          <div class="registration__form-code-send">
+            <p class="registration__form-code-send-message">
+              Отправить код повторно через <span class="registration__form-code-send-message-timer">00:29</span> 
+            </p>
+            <button class="registration__form-code-send-btn">Отправить код</button>
+          </div>
+        </div>
+        <button class="registration__form-submit btn">Отправить</button>
+      </form>
+    </div>
+    <div class="registration__right-wrapper">
+      <div class="welcome">
+        <svg class="welcome__logo" width="226" height="57" aria-hidden="true">
+          <use xlink:href="#logo"></use>
+        </svg>
+        <h1 class="welcome__title">Добро пожаловать в&nbsp;свой кабинет красоты</h1>
+        <p class="welcome__description">
+          Институт красоты СПИК&nbsp;&mdash; это специализированные клиники пластической хирургии и&nbsp;медицинской косметологии в&nbsp;Москве и&nbsp;Санкт-Петербурге. Доктора Института красоты работают по&nbsp;мировым стандартам, учитывая индивидуальные особенности каждого пациента.
+        </p>
+        <img class="welcome__pic" src="img/content/welcome.png" alt="Добро пожаловать в свой кабинет красоты" width="585" height="524" />
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

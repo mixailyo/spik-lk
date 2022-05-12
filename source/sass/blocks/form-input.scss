@@ -1,0 +1,11 @@
+.form-input {
+  border: 1px solid rgba(36, 36, 36, 0.2);
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: transparent;
+  outline: none;
+
+  &::placeholder {
+    color: rgba(36, 36, 36, 0.2);
+  }
+}

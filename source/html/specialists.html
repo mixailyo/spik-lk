@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>СПИК - Личный кабинет</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <section class="account">
+    <div class="container">
+      <a href="/" class="account__logo-link">
+        <svg class="account__logo" width="226" height="57" aria-hidden="true">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+      <div class="account__main-wrapper">
+        <h1 class="account__title">Специалисты</h1>
+        <nav class="account__menu account__menu--desktop">
+          <ul class="account__menu-list">
+            <li class="account__menu-list-item">
+              <a href="/account.html" class="account__menu-link">
+                <span class="account__menu-link-text">Профиль</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/appointments.html" class="account__menu-link">
+                <span class="account__menu-link-text">Мои записи</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/services.html" class="account__menu-link">
+                <span class="account__menu-link-text">Каталог услуг</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item account__menu-list-item--active">
+              <a href="/specialists.html" class="account__menu-link">
+                <span class="account__menu-link-text">Наши специалисты</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/review.html" class="account__menu-link">
+                <span class="account__menu-link-text">Оставить отзыв</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="account__menu account__menu--mobile custom-select slide-up" data-select="" data-name="account-menu" data-id="account-menu">
+          <span class="custom-select__label"></span><span class="custom-select__error"></span>
+          <button class="custom-select__button" type="button">
+            <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+          </button>
+          <ul class="custom-select__list" role="listbox">
+            <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--1">
+                <span class="account__menu-link-text">Профиль</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--2">
+                <span class="account__menu-link-text">Мои записи</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--3">
+                <span class="account__menu-link-text">Каталог услуг</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="true" role="option">
+              <a href="#" class="account__menu-link account__menu-link--4">
+                <span class="account__menu-link-text">Наши специалисты</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--5">
+                <span class="account__menu-link-text">Оставить отзыв</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="account__content">
+          <div class="specialists" data-tabs="parent" data-delay="300">
+            <ul class="tab-btns" data-tabs="controls">
+              <li class="tab-btns__item">
+                <button class="tab-btns__button" data-tabs="control">Хирургия</button>
+              </li>
+              <li class="tab-btns__item">
+                <button class="tab-btns__button" data-tabs="control">Косметология</button>
+              </li>
+              <li class="tab-btns__item">
+                <button class="tab-btns__button" data-tabs="control">Флебология</button>
+              </li>
+              <li class="tab-btns__item">
+                <button class="tab-btns__button" data-tabs="control">Трихология</button>
+              </li>
+              <li class="tab-btns__item">
+                <button class="tab-btns__button" data-tabs="control">Оториноларингология</button>
+              </li>
+            </ul>
+            <ul class="tab-content" data-tabs="content">
+              <li class="tab-content__item" data-tabs="element">
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+              </li>
+              <li class="tab-content__item" data-tabs="element">
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова 222222</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+              </li>
+              <li class="tab-content__item" data-tabs="element">
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова 333333</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+              </li>
+              <li class="tab-content__item" data-tabs="element">
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова 444444</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+              </li>
+              <li class="tab-content__item" data-tabs="element">
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова 55555</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+                <div class="card">
+                  <img src="img/content/card-2.jpg" class="card__pic" width="270" height="270">
+                  <p class="card__specialist-name">В.М. Несватова</p>
+                  <p class="card__specialist-position">президент медицинского холдинга "Вероника"</p>
+                  <a href="#" class="card__more">Подробнее</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

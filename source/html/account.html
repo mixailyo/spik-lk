@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>СПИК - Личный кабинет</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <section class="account">
+    <div class="container">
+      <a href="/" class="account__logo-link">
+        <svg class="account__logo" width="226" height="57" aria-hidden="true">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+      <div class="account__main-wrapper">
+        <h1 class="account__title">Профиль</h1>
+        <nav class="account__menu account__menu--desktop">
+          <ul class="account__menu-list">
+            <li class="account__menu-list-item account__menu-list-item--active">
+              <a href="/account.html" class="account__menu-link">
+                <span class="account__menu-link-text">Профиль</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/appointments.html" class="account__menu-link">
+                <span class="account__menu-link-text">Мои записи</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/services.html" class="account__menu-link">
+                <span class="account__menu-link-text">Каталог услуг</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/specialists.html" class="account__menu-link">
+                <span class="account__menu-link-text">Наши специалисты</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/review.html" class="account__menu-link">
+                <span class="account__menu-link-text">Оставить отзыв</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="account__menu account__menu--mobile custom-select slide-up" data-select="" data-name="account-menu" data-id="account-menu">
+          <span class="custom-select__label"></span><span class="custom-select__error"></span>
+          <button class="custom-select__button" type="button">
+            <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+          </button>
+          <ul class="custom-select__list" role="listbox">
+            <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="true" role="option">
+              <a href="#" class="account__menu-link account__menu-link--1">
+                <span class="account__menu-link-text">Профиль</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--2">
+                <span class="account__menu-link-text">Мои записи</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--3">
+                <span class="account__menu-link-text">Каталог услуг</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--4">
+                <span class="account__menu-link-text">Наши специалисты</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--5">
+                <span class="account__menu-link-text">Оставить отзыв</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="account__content">
+          <form class="account__info">
+            <div class="account__photo">
+              <svg class="account__photo-img" width="154" height="154" aria-hidden="true">
+                <use xlink:href="#user-photo-default"></use>
+              </svg>
+              <div class="account__photo-edit">
+                <input class="account__photo-edit-input" id="account__photo-edit-input" type="file">
+                <label class="account__photo-edit-label" for="account__photo-edit-input">Изменить фото</label>
+              </div>
+            </div>
+            <div class="account__info-main">
+              <h2 class="account__info-title">Настройки аккаунта</h2>
+              <p class="account__info-description">Пожалуйста, заполните все поля для дальнейшего использования личного кабинета</p>
+              <input type="text" class="account__info-input form-input" placeholder="Ваше имя">
+              <input type="text" class="account__info-input form-input" placeholder="Фамилия">
+              <input type="email" class="account__info-input form-input" placeholder="E-mail">
+              <input type="text" class="account__info-input form-input" placeholder="Дата рождения">
+              <div
+                class="custom-select custom-select--placeholder"
+                data-select=""
+                data-name="account-info-gender"
+                data-id="account-info-gender"
+              >
+                <span class="custom-select__label"></span><span class="custom-select__error"></span
+                ><span class="custom-select__placeholder">Пол</span>
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+                </button>
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+                    Женский
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+                    Мужской
+                  </li>
+                </ul>
+              </div>
+              <div class="account__info-distribution">
+                <h3 class="account__info-distribution-title">Я хочу получать рассылку на:</h3>
+                <ul class="account__info-distribution-list">
+                  <li class="account__info-distribution-list-item">
+                    <div class="custom-checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox-input" id="distribution-1">
+                      <label for="distribution-1" class="custom-checkbox-label">Новости института СПИК</label>
+                    </div>
+                  </li>
+                  <li class="account__info-distribution-list-item">
+                    <div class="custom-checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox-input" id="distribution-2">
+                      <label for="distribution-2" class="custom-checkbox-label">Акции и предложения института СПИК</label>
+                    </div>
+                  </li>
+                  <li class="account__info-distribution-list-item">
+                    <div class="custom-checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox-input" id="distribution-3">
+                      <label for="distribution-3" class="custom-checkbox-label">Уведомления о состоянии личного кабинета</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="account__info-privacy custom-checkbox-wrapper">
+                <input type="checkbox" class="custom-checkbox-input" id="privacy">
+                <label for="privacy" class="custom-checkbox-label">Я согласен на обработку персональных данных</label>
+              </div>
+              <button class="account__info-save btn">Сохранить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

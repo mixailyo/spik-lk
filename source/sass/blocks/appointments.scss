@@ -1,0 +1,295 @@
+.appointments {
+  overflow: hidden;
+}
+.appointments__filters-open {
+  display: none;
+
+  @include vp-1023 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    border: unset;
+    color: $color-grey;
+  }
+}
+.appointments__filters-open-pic {
+  margin-right: 15px;
+}
+.appointments__filters {
+  display: grid;
+  grid-template-columns: 1fr 2.28fr 1.15fr 1.9fr;
+  column-gap: 20px;
+
+  @include vp-1023 {
+    padding: 0 15px;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, #F4F3F5, #F4F3F5), #EBEEF5;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+    &--active {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateX(0);
+    }
+  }
+}
+.appointments__filter {
+  &--date {
+    border: 1px solid rgba(36, 36, 36, 0.2);
+    border-radius: 8px;
+    max-width: 130px;
+
+    @include vp-1023 {
+      max-width: unset;
+    }
+  }
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+}
+.appointments__filters-mobile-header {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 120px 0 60px;
+  }
+}
+.appointments__filters-back {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.appointments__filters-title {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+}
+.appointments__filters-submit {
+  display: none;
+
+  @include vp-1023 {
+    display: flex;
+    margin: 40px auto 0;
+    width: 200px;
+  }
+}
+.appointments__filter-date-input {
+  position: relative;
+  border: unset;
+  background-color: unset;
+  padding: 10px 20px;
+  outline: none;
+  max-width: 100%;
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-clear-button {
+    z-index: -10
+  }
+
+  &::-webkit-input-placeholder {
+    z-index: 99
+  }
+  
+  &:placeholder {
+    z-index: 99
+  }
+
+  &:before {
+    width: 100%;
+    content: attr(data-value);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url('../../img/svg/calendar.svg');
+    pointer-events: none;
+  }
+
+  @include vp-1023 {
+    width: 100%;
+  }
+}
+
+.appointments__list-headers {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: 1.27fr 2.09fr 1.09fr 1fr 2.55fr;
+  font-size: 12px;
+  color: $color-nobel;
+
+  span {
+    &:nth-child(1) {
+      padding-left: 20px;
+    }
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+.appointments__list {
+  list-style: none;
+  padding: 0;
+}
+.appointments__item {
+  display: grid;
+  grid-template-columns: 1.05fr 2.13fr 1.12fr 1fr 2.18fr 0.22fr;
+  gap: 10px;
+  background: $color-default-white;
+  box-shadow: 0px 8px 20px -4px rgba(30, 30, 30, 0.08);
+  border-radius: 10px;
+  padding: 25px 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 2fr 4.6fr 2.6fr 1fr;
+    gap: 20px 25px;
+    padding: 25px 15px;
+  }
+}
+.appointments__item-number-title,
+.appointments__item-specialist-title,
+.appointments__item-date-title,
+.appointments__item-status-title, 
+.appointments__item-service-title {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+    font-size: 12px;
+    color: $color-nobel;
+    margin-bottom: 3px;
+  }
+}
+.appointments__item-number {
+  font-weight: 500;
+}
+.appointments__item-specialist {
+  color: $color-purple-heart;
+
+  @include vp-1023 {
+    grid-column: span 4;
+    order: 4;
+  }
+}
+.appointments__item-date {
+  @include vp-1023 {
+    br {
+      display: none;
+    }
+  }
+}
+.appointments__item-date-value {
+  @include vp-1023 {
+    span {
+      &:first-child {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+.appointments__item-status {
+}
+.appointments__item-service {
+  @include vp-1023 {
+    grid-column: span 4;
+    order: 5;
+  }
+}
+.appointments__item-more-btn {
+  aspect-ratio: 1 / 1;
+  border: unset;
+  background-color: unset;
+  background-image: url('../../img/svg/more.svg');
+  background-size: cover;
+  cursor: pointer;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+}
+.appointments__item-more {
+  background: $color-default-white;
+  border: 1px solid #F4F3F5;
+  box-shadow: 0px 4px 17px rgba(37, 51, 91, 0.2);
+  border-radius: 10px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-95%, 50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $trans-default;
+
+  &--active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @include vp-1023 {
+    transform: translate(-95%, 30%);
+  }
+}
+.appointments__item-more-call {
+  display: flex;
+  align-items: center;
+  color: $color-purple-heart;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.appointments__item-more-icon {
+  margin-right: 5px;
+}
+.appointments__item-more-cancel {
+  border: unset;
+  background-color: unset;
+  text-align: left;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: $color-carrot-orange;
+  cursor: pointer;
+}
+.appointments__make {
+  margin: 45px auto 0;
+  width: 200px;
+}

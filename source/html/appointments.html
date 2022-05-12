@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>СПИК - Личный кабинет</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <section class="account">
+    <div class="container">
+      <a href="/" class="account__logo-link">
+        <svg class="account__logo" width="226" height="57" aria-hidden="true">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+      <div class="account__main-wrapper">
+        <h1 class="account__title">Мои записи</h1>
+        <nav class="account__menu account__menu--desktop">
+          <ul class="account__menu-list">
+            <li class="account__menu-list-item">
+              <a href="/account.html" class="account__menu-link">
+                <span class="account__menu-link-text">Профиль</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item account__menu-list-item--active">
+              <a href="/appointments.html" class="account__menu-link">
+                <span class="account__menu-link-text">Мои записи</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/services.html" class="account__menu-link">
+                <span class="account__menu-link-text">Каталог услуг</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/specialists.html" class="account__menu-link">
+                <span class="account__menu-link-text">Наши специалисты</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/review.html" class="account__menu-link">
+                <span class="account__menu-link-text">Оставить отзыв</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="account__menu account__menu--mobile custom-select slide-up" data-select="" data-name="account-menu" data-id="account-menu">
+          <span class="custom-select__label"></span><span class="custom-select__error"></span>
+          <button class="custom-select__button" type="button">
+            <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+          </button>
+          <ul class="custom-select__list" role="listbox">
+            <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--1">
+                <span class="account__menu-link-text">Профиль</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="true" role="option">
+              <a href="#" class="account__menu-link account__menu-link--2">
+                <span class="account__menu-link-text">Мои записи</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--3">
+                <span class="account__menu-link-text">Каталог услуг</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--4">
+                <span class="account__menu-link-text">Наши специалисты</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--5">
+                <span class="account__menu-link-text">Оставить отзыв</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="account__content">
+          <div class="appointments">
+            <button class="appointments__filters-open">
+              <svg class="appointments__filters-open-pic" width="16" height="16" aria-hidden="true">
+                <use xlink:href="#filter"></use>
+              </svg>
+              <span>Фильтровать записи</span>
+            </button>
+            <div class="appointments__filters">
+              <div class="appointments__filters-mobile-header">
+                <button class="appointments__filters-back button-back">
+                  <img class="button-back__pic" src="img/svg/arrow-back.svg" alt="Назад">
+                </button>
+                <h3 class="appointments__filters-title">Фильтрация</h3>
+              </div>
+              <div class="appointments__filter appointments__filter--date">
+                <input type="date" class="appointments__filter-date-input" id="date-filter" aria-required="true" aria-invalid="false" data-value="15.02.2022">
+              </div>
+              <div
+                class="appointments__filter custom-select custom-select--placeholder"
+                data-select=""
+                data-name="account-info-specialist"
+                data-id="account-info-specialist"
+              >
+                <span class="custom-select__label"></span>
+                <span class="custom-select__error"></span>
+                <span class="custom-select__placeholder">Специалист</span>
+
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+                </button>
+
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+                    Специалист №1
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+                    Специалист №2
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+                    Специалист №3
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+                    Специалист №4
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">
+                    Специалист №5
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="appointments__filter custom-select custom-select--placeholder"
+                data-select=""
+                data-name="account-info-record-status"
+                data-id="account-info-record-status"
+              >
+                <span class="custom-select__label"></span>
+                <span class="custom-select__error"></span>
+                <span class="custom-select__placeholder">Статус записи</span>
+
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+                </button>
+
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+                    Статус записи №1
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+                    Статус записи №2
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+                    Статус записи №3
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+                    Статус записи №4
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">
+                    Статус записи №5
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="appointments__filter custom-select custom-select--placeholder"
+                data-select=""
+                data-name="account-info-service"
+                data-id="account-info-service"
+              >
+                <span class="custom-select__label"></span>
+                <span class="custom-select__error"></span>
+                <span class="custom-select__placeholder">Услуга</span>
+
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+                </button>
+
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+                    Услуга №1
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+                    Услуга №2
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+                    Услуга №3
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+                    Услуга №4
+                  </li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">
+                    Услуга №5
+                  </li>
+                </ul>
+              </div>
+              <button class="appointments__filters-submit btn">Применить</button>
+            </div>
+            <div class="appointments__list-headers">
+              <span>Номер записи</span>
+              <span>Специалист</span>
+              <span>Дата и время</span>
+              <span>Статус</span>
+              <span>Услуга</span>
+            </div>
+            <ul class="appointments__list">
+              <li class="appointments__item" data-record-number="11111">
+                <div class="appointments__item-number">
+                  <span class="appointments__item-number-title">Номер</span>
+                  <span class="appointments__item-number-value">83519</span>
+                </div>
+                <div class="appointments__item-specialist">
+                  <span class="appointments__item-specialist-title">Специалист</span>
+                  <span class="appointments__item-specialist-value">Глазырина Наталья Сергеевна</span>
+                </div>
+                <div class="appointments__item-date">
+                  <span class="appointments__item-date-title">Дата и время</span>
+                  <div class="appointments__item-date-value"><span>22.02.2022</span><br/><span>19:30</span></div>
+                </div>
+                <div class="appointments__item-status">
+                  <span class="appointments__item-status-title">Статус</span>
+                  <span class="appointments__item-status-value">Активная</span>
+                </div>
+                <div class="appointments__item-service">
+                  <span class="appointments__item-service-title">Услуга</span>
+                  <span class="appointments__item-service-value">Процедура быстрой красоты: ботулинотерапия + контурная пластика</span>
+                </div>
+                <button class="appointments__item-more-btn"></button>
+              </li>
+              <li class="appointments__item" data-record-number="22222">
+                <div class="appointments__item-number">
+                  <span class="appointments__item-number-title">Номер</span>
+                  <span class="appointments__item-number-value">83519</span>
+                </div>
+                <div class="appointments__item-specialist">
+                  <span class="appointments__item-specialist-title">Специалист</span>
+                  <span class="appointments__item-specialist-value">Глазырина Наталья Сергеевна</span>
+                </div>
+                <div class="appointments__item-date">
+                  <span class="appointments__item-date-title">Дата и время</span>
+                  <div class="appointments__item-date-value"><span>22.02.2022</span><br/><span>19:30</span></div>
+                </div>
+                <div class="appointments__item-status">
+                  <span class="appointments__item-status-title">Статус</span>
+                  <span class="appointments__item-status-value">Активная</span>
+                </div>
+                <div class="appointments__item-service">
+                  <span class="appointments__item-service-title">Услуга</span>
+                  <span class="appointments__item-service-value">Процедура быстрой красоты: ботулинотерапия + контурная пластика</span>
+                </div>
+                <button class="appointments__item-more-btn"></button>
+              </li>
+              <li class="appointments__item" data-record-number="33333">
+                <div class="appointments__item-number">
+                  <span class="appointments__item-number-title">Номер</span>
+                  <span class="appointments__item-number-value">83519</span>
+                </div>
+                <div class="appointments__item-specialist">
+                  <span class="appointments__item-specialist-title">Специалист</span>
+                  <span class="appointments__item-specialist-value">Глазырина Наталья Сергеевна</span>
+                </div>
+                <div class="appointments__item-date">
+                  <span class="appointments__item-date-title">Дата и время</span>
+                  <div class="appointments__item-date-value"><span>22.02.2022</span><br/><span>19:30</span></div>
+                </div>
+                <div class="appointments__item-status">
+                  <span class="appointments__item-status-title">Статус</span>
+                  <span class="appointments__item-status-value">Активная</span>
+                </div>
+                <div class="appointments__item-service">
+                  <span class="appointments__item-service-title">Услуга</span>
+                  <span class="appointments__item-service-value">Процедура быстрой красоты: ботулинотерапия + контурная пластика</span>
+                </div>
+                <button class="appointments__item-more-btn"></button>
+              </li>
+              <li class="appointments__item" data-record-number="444444">
+                <div class="appointments__item-number">
+                  <span class="appointments__item-number-title">Номер</span>
+                  <span class="appointments__item-number-value">83519</span>
+                </div>
+                <div class="appointments__item-specialist">
+                  <span class="appointments__item-specialist-title">Специалист</span>
+                  <span class="appointments__item-specialist-value">Глазырина Наталья Сергеевна</span>
+                </div>
+                <div class="appointments__item-date">
+                  <span class="appointments__item-date-title">Дата и время</span>
+                  <div class="appointments__item-date-value"><span>22.02.2022</span><br/><span>19:30</span></div>
+                </div>
+                <div class="appointments__item-status">
+                  <span class="appointments__item-status-title">Статус</span>
+                  <span class="appointments__item-status-value">Активная</span>
+                </div>
+                <div class="appointments__item-service">
+                  <span class="appointments__item-service-title">Услуга</span>
+                  <span class="appointments__item-service-value">Процедура быстрой красоты: ботулинотерапия + контурная пластика</span>
+                </div>
+                <button class="appointments__item-more-btn"></button>
+              </li>
+              <li class="appointments__item" data-record-number="555555">
+                <div class="appointments__item-number">
+                  <span class="appointments__item-number-title">Номер</span>
+                  <span class="appointments__item-number-value">83519</span>
+                </div>
+                <div class="appointments__item-specialist">
+                  <span class="appointments__item-specialist-title">Специалист</span>
+                  <span class="appointments__item-specialist-value">Глазырина Наталья Сергеевна</span>
+                </div>
+                <div class="appointments__item-date">
+                  <span class="appointments__item-date-title">Дата и время</span>
+                  <div class="appointments__item-date-value"><span>22.02.2022</span><br/><span>19:30</span></div>
+                </div>
+                <div class="appointments__item-status">
+                  <span class="appointments__item-status-title">Статус</span>
+                  <span class="appointments__item-status-value">Активная</span>
+                </div>
+                <div class="appointments__item-service">
+                  <span class="appointments__item-service-title">Услуга</span>
+                  <span class="appointments__item-service-value">Процедура быстрой красоты: ботулинотерапия + контурная пластика</span>
+                </div>
+                <button class="appointments__item-more-btn"></button>
+              </li>
+            </ul>
+            <div class="appointments__item-more">
+              <a href="tel:+79999999999" class="appointments__item-more-call">
+                <svg class="appointments__item-more-icon" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#phone-call"></use>
+                </svg>
+                <span>Позвонить администратору</span>
+              </a>
+              <button class="appointments__item-more-cancel" data-open-modal="cancel-record">
+                <svg class="appointments__item-more-icon" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#cancel"></use>
+                </svg>
+                <span>Отменить запись</span>
+              </button>
+            </div>
+            <button class="appointments__make btn" data-open-modal="make-an-appointment">Записаться на прием</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("source/html/base/modal.html", {
+    "name": "cancel-record"
+  })
+
+  @@include("source/html/base/modal.html", {
+    "name": "record-canceled"
+  })
+
+  @@include("source/html/base/modal.html", {
+    "name": "make-an-appointment"
+  })
+
+  @@include("source/html/base/modal.html", {
+    "name": "appointment-success"
+  })
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

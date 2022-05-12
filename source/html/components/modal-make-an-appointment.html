@@ -1,0 +1,95 @@
+<form class="appointment" action="">
+  <h2 class="appointment__title modal__title">Записаться на прием</h2>
+  <input class="appointment__input form-input" type="text" placeholder="Ваше имя" required>
+  <input class="appointment__input form-input" type="text" placeholder="Фамилия" required>
+  <input class="appointment__input form-input" type="tel" placeholder="Телефон" required>
+  <div
+    class="appointment__select custom-select custom-select--placeholder"
+    data-select=""
+    data-name="appointment-service"
+    data-id="appointment-service"
+  >
+    <span class="custom-select__label"></span>
+    <span class="custom-select__error"></span>
+    <span class="custom-select__placeholder">Выберите услугу*</span>
+
+    <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+      <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+    </button>
+
+    <ul class="custom-select__list" role="listbox">
+      <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+        Услуга №1
+      </li>
+      <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+        Услуга №2
+      </li>
+      <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+        Услуга №3
+      </li>
+      <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+        Услуга №4
+      </li>
+      <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">
+        Услуга №5
+      </li>
+    </ul>
+  </div>
+  <div
+    class="appointment__select custom-select custom-select--placeholder"
+    data-select=""
+    data-name="appointment-specialist"
+    data-id="appointment-specialist"
+  >
+    <span class="custom-select__label"></span>
+    <span class="custom-select__error"></span>
+    <span class="custom-select__placeholder">Выберите специалиста*</span>
+
+    <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+      <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+    </button>
+
+    <ul class="custom-select__list" role="listbox">
+      <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+        Специалист №1
+      </li>
+      <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+        Специалист №2
+      </li>
+      <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+        Специалист №3
+      </li>
+      <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+        Специалист №4
+      </li>
+      <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">
+        Специалист №5
+      </li>
+    </ul>
+  </div>
+  <input class="appointment__date appointment__input form-input" type="datetime-local" data-value="Желаемые дата и время приема*" required>
+  <div class="appointment__warning">
+    <svg class="appointment__warning-icon" width="24" height="24" aria-hidden="true">
+      <use xlink:href="#warning"></use>
+    </svg>
+    <span>Точные дата и время будут подтверждены после звонка администратора</span>
+  </div>
+  <input class="appointment__input form-input" type="text" placeholder="Описание проблемы" required>
+  <div class="appointment__files upload-files">
+    <ul class="upload-files__list"></ul>
+    <input class="upload-files__input" id="upload-files__input" type="file" multiple>
+    <label class="upload-files__label" for="upload-files__input">
+      <svg class="upload-files__label-icon" width="24" height="24" aria-hidden="true">
+        <use xlink:href="#upload-pic"></use>
+      </svg>
+      <p class="upload-files__label-description upload-files__label-description--desktop">Нажмите на поле или перетащите в него файл</p>
+      <p class="upload-files__label-description upload-files__label-description--mobile">Нажмите на поле, чтобы загрузить файл</p>
+      <p class="upload-files__label-size">Максимальный вес файла 5 Мб</p>
+    </label>
+  </div>
+  <div class="appointment__privacy custom-checkbox-wrapper">
+    <input type="checkbox" class="custom-checkbox-input" id="privacy">
+    <label for="privacy" class="custom-checkbox-label">Отправляя персональные данные из этой формы, Вы даете согласие на их обработку</label>
+  </div>
+  <button class="appointment__submit btn">Записаться</button>
+</form>

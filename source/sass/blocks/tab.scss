@@ -1,0 +1,68 @@
+.tab-btns {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  margin: 0 -20px;
+  overflow: auto;
+}
+.tab-btns__item {
+  margin: 0 20px;
+}
+.tab-btns__button {
+  border: unset;
+  background-color: unset;
+
+  font-size: 16px;
+  color: $color-zambezi;
+  padding: 0;
+  cursor: pointer;
+  transition: color $trans-default;
+
+  &.is-active,
+  &:hover {
+    text-decoration-line: underline;
+    color: $color-purple-heart;
+  }
+}
+.tab-content {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  margin-top: 30px;
+  overflow: hidden;
+  position: relative;
+
+  @include vp-767 {
+    margin-top: 20px;
+  }
+}
+.tab-content__item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 30px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: opacity 0.5s ease-in-out;
+
+  &.is-active {
+    position: static;
+    opacity: 1;
+    height: auto;
+    pointer-events: all;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px 30px;
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>СПИК - Личный кабинет</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <section class="account">
+    <div class="container">
+      <a href="/" class="account__logo-link">
+        <svg class="account__logo" width="226" height="57" aria-hidden="true">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+      <div class="account__main-wrapper">
+        <h1 class="account__title">Услуги</h1>
+        <nav class="account__menu account__menu--desktop">
+          <ul class="account__menu-list">
+            <li class="account__menu-list-item">
+              <a href="/account.html" class="account__menu-link">
+                <span class="account__menu-link-text">Профиль</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/appointments.html" class="account__menu-link">
+                <span class="account__menu-link-text">Мои записи</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/services.html" class="account__menu-link">
+                <span class="account__menu-link-text">Каталог услуг</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item">
+              <a href="/specialists.html" class="account__menu-link">
+                <span class="account__menu-link-text">Наши специалисты</span>
+              </a>
+            </li>
+            <li class="account__menu-list-item account__menu-list-item--active">
+              <a href="/review.html" class="account__menu-link">
+                <span class="account__menu-link-text">Оставить отзыв</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="account__menu account__menu--mobile custom-select slide-up" data-select="" data-name="account-menu" data-id="account-menu">
+          <span class="custom-select__label"></span><span class="custom-select__error"></span>
+          <button class="custom-select__button" type="button">
+            <span class="custom-select__text"></span><span class="custom-select__icon"></span>
+          </button>
+          <ul class="custom-select__list" role="listbox">
+            <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--1">
+                <span class="account__menu-link-text">Профиль</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--2">
+                <span class="account__menu-link-text">Мои записи</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--3">
+                <span class="account__menu-link-text">Каталог услуг</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">
+              <a href="#" class="account__menu-link account__menu-link--4">
+                <span class="account__menu-link-text">Наши специалисты</span>
+              </a>
+            </li>
+            <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="true" role="option">
+              <a href="#" class="account__menu-link account__menu-link--5">
+                <span class="account__menu-link-text">Оставить отзыв</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="account__content">
+          <form class="review">
+            <div class="review__wrapper">
+              <h2 class="review__title">Новый отзыв</h2>
+              <p class="review__description">Пожалуйста, заполните все поля для дальнейшего использования личного кабинета</p>
+              <input class="review__input form-input" type="text" placeholder="Ваше имя" required>
+              <input class="review__input form-input" type="text" placeholder="Фамилия" required>
+              <input class="review__input form-input" type="tel" placeholder="Телефон" required>
+              <textarea class="review__textarea form-input" name="description" id="description" placeholder="Описание проблемы"></textarea>
+              <div class="review__files upload-files">
+                <ul class="upload-files__list"></ul>
+                <input class="upload-files__input" id="upload-files__input" type="file" multiple>
+                <label class="upload-files__label" for="upload-files__input">
+                  <svg class="upload-files__label-icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#upload-pic"></use>
+                  </svg>
+                  <p class="upload-files__label-description upload-files__label-description--desktop">Нажмите на поле или перетащите в него файл</p>
+                  <p class="upload-files__label-description upload-files__label-description--mobile">Нажмите на поле, чтобы загрузить файл</p>
+                  <p class="upload-files__label-size">Максимальный вес файла 5 Мб</p>
+                </label>
+              </div>
+              <div class="review__privacy custom-checkbox-wrapper">
+                <input type="checkbox" class="custom-checkbox-input" id="privacy">
+                <label for="privacy" class="custom-checkbox-label">Отправляя персональные данные из этой формы, Вы даете согласие на их обработку</label>
+              </div>
+              <button class="review__submit btn">Отправить</button>
+            </div>
+            <div class="review__success">
+              <div class="review__number">Ваш отзыв №7539 отправлена</div>
+              <div class="review__date">
+                <span class="review__date-title">Дата отправки</span>
+                <span class="review__date-value">22.12.2021</span>
+              </div>
+              <div class="review__thanks">Спасибо за Ваши сообщения, они позволяют нам становиться лучше.</div>
+              <div class="review__warning">
+                <div class="review__warning-title">Порядок рассмотрения</div>
+                <div class="review__warning-description">Отзывы рассматриваются в течение 30 дней после отправки. После рассмотрения с Вами свжется наш администратор.</div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
